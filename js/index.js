@@ -1,9 +1,9 @@
 $(document).ready(()=>{
     console.log("Running...")
     if(window.location.hash===""){
-        document.getElementsByClassName("loading-text")[0].innerHTML = "参数错误，将跳转至pai233の小窝<dot>...</dot>"
+        document.getElementsByClassName("loading-text")[0].innerHTML = "参数错误，将跳转回青云工作室<dot>...</dot>"
         setTimeout(()=>{
-            window.location.href = "https://blog.pai233.top/"
+            window.location.href = "https://qystudio.ltd/"
         },5000)
         return;
     }
@@ -15,7 +15,7 @@ $(document).ready(()=>{
     if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="pai233.top" || document.referrer===""){
         swal.fire({
             title: "确定访问？",
-            text: "该网址不属于咕咕小站，你确定要打开"+link+"吗？",
+            text: "该网址不属于青云工作室，你确定要打开"+link+"吗？",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
