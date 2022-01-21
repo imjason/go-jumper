@@ -28,7 +28,7 @@ async function checkLocalSite(url){
             original: domain
         }
         //console.log(domain)
-        if(domain.check==="https://qystudio.ltd" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
+        if(domain.check==="qystudio.ltd" || domain.check==="/" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
         return false;
     }catch(err){
         return true;
