@@ -24,11 +24,12 @@ async function checkLocalSite(url){
         //console.log(domain,domain[domain.length-2]+'.'+domain[domain.length-1])
         domain = {
             //二级域名请去除下一行的注释
-            check: (domain[domain.length-3]+'.'+domain[domain.length-2]+'.'+domain[domain.length-1]).split('/')[0],
+            check: (/*domain[domain.length-3]+'.'+*/domain[domain.length-2]+'.'+domain[domain.length-1]).split('/')[0],
             original: domain
         }
         //console.log(domain)
-        if(domain.indexOf("qystudio.ltd") > 0 || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
+        if(domain.check==="qystudio.ltd" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
+        //if(domain.indexOf("qystudio.ltd") > 0 || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
         return false;
     }catch(err){
         return true;
