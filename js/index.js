@@ -12,7 +12,7 @@ $(document).ready(()=>{
     let link = window.atob(base64[1])
     let referrer = document.referrer.split('/')[2];
     referrer = referrer===undefined?"":referrer.split('.')
-    if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="pai233.top" || document.referrer===""){
+    if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="qystudio.ltd" || document.referrer===""){
         swal.fire({
             title: "确定访问？",
             text: "该网址不属于青云工作室，你确定要打开"+link+"吗？",
@@ -27,7 +27,7 @@ $(document).ready(()=>{
                 console.log('setTimeout')
                 setTimeout(function(){
                     window.location.href = link
-                },3000)
+                },1500)
             }    
             else {
                 window.opener=null;
